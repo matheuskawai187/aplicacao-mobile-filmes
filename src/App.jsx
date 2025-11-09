@@ -56,24 +56,24 @@ const App = () => {
   return (
     <div className="max-w-md mx-auto bg-gray-900 select-none">
       {currentScreen === 'login' && (
-        <LoginScreen 
+        <LoginScreen
           onLogin={handleLogin}
           onSignup={handleSignup}
           error={loginError}
         />
       )}
-      
+
       {currentScreen === 'home' && (
-        <HomeScreen 
+        <HomeScreen
           userData={userData}
           onNavigate={handleNavigate}
           onPlayTrailer={openTrailer}
           moviesData={moviesData}
         />
       )}
-      
+
       {currentScreen === 'profile' && (
-        <ProfileScreen 
+        <ProfileScreen
           userData={userData}
           onLogout={handleLogout}
           onNavigate={handleNavigate}
@@ -84,6 +84,7 @@ const App = () => {
           userData={userData}
           onNavigate={handleNavigate}
           moviesData={moviesData}
+          onPlayTrailer={openTrailer}
         />
       )}
     </div>

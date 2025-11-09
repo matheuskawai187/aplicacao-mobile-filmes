@@ -9,11 +9,11 @@ export const ProfileScreen = ({ userData, onLogout, onNavigate }) => {
 
       <div className="bg-gray-800 rounded-lg p-6 mb-6">
         <div className="flex items-center gap-4 mb-6">
-          <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
+          <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
             <User className="w-8 h-8 text-white" />
           </div>
-          <div>
-            <h2 className="text-white text-xl font-semibold">
+          <div className="flex-1 min-w-0">
+            <h2 className="text-white text-xl font-semibold truncate">
               {userData?.email}
             </h2>
             <p className="text-gray-400 text-sm">

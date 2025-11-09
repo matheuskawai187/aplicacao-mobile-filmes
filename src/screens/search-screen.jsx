@@ -4,7 +4,7 @@ import { BottomNavigation } from '../components/common/bottom-navigation';
 import { MovieCard } from '../components/movie/movie-card';
 import { Logo } from '../components/common/logo';
 
-export const SearchScreen = ({ onNavigate, moviesData }) => {
+export const SearchScreen = ({ onNavigate, moviesData, onPlayTrailer }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Combina todos os filmes em uma única lista
@@ -63,7 +63,11 @@ export const SearchScreen = ({ onNavigate, moviesData }) => {
             </h3>
             <div className="grid grid-cols-3 gap-3">
               {filteredMovies.map((movie) => (
-                <MovieCard key={movie.id} movie={movie} />
+                <MovieCard
+                  key={movie.id}
+                  movie={movie}
+                  onPlay={onPlayTrailer}
+                />
               ))}
             </div>
           </div>
