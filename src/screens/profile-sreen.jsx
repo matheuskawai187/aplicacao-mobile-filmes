@@ -1,12 +1,12 @@
 import { User } from 'lucide-react';
-import { Button } from '../components/common/Button';
+import { Button } from '../components/common/button';
 import { BottomNavigation } from '../components/common/bottom-navigation';
 
 export const ProfileScreen = ({ userData, onLogout, onNavigate }) => {
   return (
     <div className="min-h-screen bg-gray-900 px-6 pt-8 pb-20">
       <h1 className="text-white text-3xl font-bold mb-8">Perfil</h1>
-      
+
       <div className="bg-gray-800 rounded-lg p-6 mb-6">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
@@ -27,7 +27,7 @@ export const ProfileScreen = ({ userData, onLogout, onNavigate }) => {
         Sair
       </Button>
 
-      <BottomNavigation 
+      <BottomNavigation
         activeScreen="profile"
         onNavigate={onNavigate}
       />

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button } from '../common/Button';
 import { ErrorMessage } from './error-message';
+import { Button } from '../common/button';
 
 export const LoginForm = ({ onLogin, onSignup, error }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });

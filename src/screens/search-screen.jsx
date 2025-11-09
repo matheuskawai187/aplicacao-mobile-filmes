@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Search } from 'lucide-react';
 import { BottomNavigation } from '../components/common/bottom-navigation';
 import { MovieCard } from '../components/movie/movie-card';
-import { Logo } from '../components/common/Logo';
+import { Logo } from '../components/common/logo';
 
 export const SearchScreen = ({ onNavigate, moviesData }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -15,9 +15,9 @@ export const SearchScreen = ({ onNavigate, moviesData }) => {
 
   // Filtra os filmes baseado na busca
   const filteredMovies = searchQuery
-    ? allMovies.filter(movie => 
-        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+    ? allMovies.filter(movie =>
+      movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+    )
     : [];
 
   return (

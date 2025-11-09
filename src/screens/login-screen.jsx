@@ -1,4 +1,4 @@
-import { Logo } from '../components/common/Logo';
+import { Logo } from '../components/common/logo';
 import { LoginForm } from '../components/auth/login-form';
 
 export const LoginScreen = ({ onLogin, onSignup, error }) => {
@@ -13,7 +13,7 @@ export const LoginScreen = ({ onLogin, onSignup, error }) => {
           Bem-vindo
         </h1>
 
-        <LoginForm 
+        <LoginForm
           onLogin={onLogin}
           onSignup={onSignup}
           error={error}
